@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производная сложной функции — ЕГЭ Математика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a href="index.html">Портал ЕГЭ по математике</a></header>
+<div class="main-container">
+    <nav id="main-nav"></nav>
+    <article>
+        <div class="content-block">
+            <h1>Производная сложной функции</h1>
+
+            <p>Большинство функций, встречающихся в задачах ЕГЭ, являются <strong>сложными</strong> (композицией двух или более функций). Для их дифференцирования используется правило цепочки.</p>
+
+            <h3>Что такое сложная функция</h3>
+            <p>Функция y = f(g(x)) называется <strong>сложной функцией</strong> (или композицией функций). Здесь g(x) &mdash; внутренняя функция, а f(u) &mdash; внешняя функция (где u = g(x)).</p>
+            <p>Например, y = sin(3x + 1): внешняя функция &mdash; sin(u), внутренняя &mdash; u = 3x + 1.</p>
+
+            <hr>
+
+            <h3>Правило дифференцирования сложной функции (цепное правило)</h3>
+
+            <div class="formula-box">
+                (f(g(x)))' = f'(g(x)) · g'(x)
+            </div>
+
+            <p>Словами: <em>производная сложной функции равна произведению производной внешней функции (вычисленной от внутренней) на производную внутренней функции</em>.</p>
+
+            <p>Для цепочки из трёх функций y = f(g(h(x))):</p>
+            <div class="formula-box">
+                y' = f'(g(h(x))) · g'(h(x)) · h'(x)
+            </div>
+
+            <hr>
+
+            <h3>Часто встречающиеся формулы</h3>
+            <p>Применение правила цепочки к стандартным внешним функциям (u = u(x) &mdash; внутренняя функция):</p>
+            <ul>
+                <li>(u<sup>n</sup>)' = n · u<sup>n−1</sup> · u'</li>
+                <li>(sin u)' = cos u · u'</li>
+                <li>(cos u)' = −sin u · u'</li>
+                <li>(tg u)' = u' / cos²u</li>
+                <li>(e<sup>u</sup>)' = e<sup>u</sup> · u'</li>
+                <li>(a<sup>u</sup>)' = a<sup>u</sup> · ln a · u'</li>
+                <li>(ln u)' = u' / u</li>
+                <li>(√u)' = u' / (2√u)</li>
+            </ul>
+
+            <hr>
+
+            <h3>Примеры</h3>
+
+            <div class="example">
+                <strong>Пример 1.</strong> Найти производную f(x) = (5x − 3)⁷.<br><br>
+                <strong>Решение.</strong> Внешняя функция: u⁷, внутренняя: u = 5x − 3.<br>
+                f'(x) = 7·(5x − 3)⁶ · (5x − 3)' = 7·(5x − 3)⁶ · 5 = 35·(5x − 3)⁶.<br><br>
+                <strong>Ответ:</strong> f'(x) = 35(5x − 3)⁶.
+            </div>
+
+            <div class="example">
+                <strong>Пример 2.</strong> Найти производную f(x) = sin(4x + π/3).<br><br>
+                <strong>Решение.</strong> Внешняя: sin(u), внутренняя: u = 4x + π/3.<br>
+                f'(x) = cos(4x + π/3) · 4 = 4cos(4x + π/3).<br><br>
+                <strong>Ответ:</strong> f'(x) = 4cos(4x + π/3).
+            </div>
+
+            <div class="example">
+                <strong>Пример 3.</strong> Найти производную f(x) = e<sup>−x²</sup>.<br><br>
+                <strong>Решение.</strong> Внешняя: e<sup>u</sup>, внутренняя: u = −x².<br>
+                f'(x) = e<sup>−x²</sup> · (−x²)' = e<sup>−x²</sup> · (−2x) = −2x·e<sup>−x²</sup>.<br><br>
+                <strong>Ответ:</strong> f'(x) = −2x·e<sup>−x²</sup>.
+            </div>
+
+            <div class="example">
+                <strong>Пример 4.</strong> Найти производную f(x) = ln(x² + 1).<br><br>
+                <strong>Решение.</strong> Внешняя: ln(u), внутренняя: u = x² + 1.<br>
+                f'(x) = (x² + 1)' / (x² + 1) = 2x / (x² + 1).<br><br>
+                <strong>Ответ:</strong> f'(x) = 2x / (x² + 1).
+            </div>
+
+            <div class="example">
+                <strong>Пример 5.</strong> Найти производную f(x) = cos³(2x).<br><br>
+                <strong>Решение.</strong> Здесь тройная композиция: f(x) = u³, где u = cos(v), v = 2x.<br>
+                f'(x) = 3cos²(2x) · (cos(2x))' = 3cos²(2x) · (−sin(2x)) · 2 = −6cos²(2x)·sin(2x).<br><br>
+                <strong>Ответ:</strong> f'(x) = −6cos²(2x)·sin(2x).
+            </div>
+
+            <div class="example">
+                <strong>Пример 6.</strong> Найти производную f(x) = √(1 − 4x²).<br><br>
+                <strong>Решение.</strong> Внешняя: √u, внутренняя: u = 1 − 4x².<br>
+                f'(x) = (1 − 4x²)' / (2√(1 − 4x²)) = (−8x) / (2√(1 − 4x²)) = −4x / √(1 − 4x²).<br><br>
+                <strong>Ответ:</strong> f'(x) = −4x / √(1 − 4x²).
+            </div>
+
+            <div class="example">
+                <strong>Пример 7.</strong> Найти производную f(x) = 3<sup>sin x</sup>.<br><br>
+                <strong>Решение.</strong> Внешняя: 3<sup>u</sup>, внутренняя: u = sin x.<br>
+                f'(x) = 3<sup>sin x</sup> · ln 3 · cos x.<br><br>
+                <strong>Ответ:</strong> f'(x) = 3<sup>sin x</sup> · ln 3 · cos x.
+            </div>
+
+            <div class="example">
+                <strong>Пример 8.</strong> Найти производную f(x) = ln(sin x).<br><br>
+                <strong>Решение.</strong> Внешняя: ln(u), внутренняя: u = sin x.<br>
+                f'(x) = (sin x)' / sin x = cos x / sin x = ctg x.<br><br>
+                <strong>Ответ:</strong> f'(x) = ctg x (при sin x > 0).
+            </div>
+
+        </div>
+    </article>
+</div>
+<footer>Учебный портал по подготовке к ЕГЭ по математике (профиль)</footer>
+<script src="nav.js"></script>
+</body>
+</html>

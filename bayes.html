@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формула Байеса — ЕГЭ Математика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a href="index.html">Портал ЕГЭ по математике</a></header>
+<div class="main-container">
+    <nav id="main-nav"></nav>
+    <article>
+        <div class="content-block">
+            <h1>Формула полной вероятности и Байеса</h1>
+
+            <h3>Формула полной вероятности</h3>
+            <p>Если событие A может произойти только при одной из несовместных гипотез H₁, H₂, ..., Hₙ, образующих полную группу:</p>
+            <div class="formula-box">P(A) = Σ P(Hᵢ) · P(A|Hᵢ)</div>
+
+            <hr>
+
+            <h3>Формула Байеса</h3>
+            <p>Позволяет пересчитать вероятности гипотез после того, как событие A произошло:</p>
+            <div class="formula-box">P(Hₖ|A) = P(Hₖ) · P(A|Hₖ) / P(A)</div>
+
+            <ul>
+                <li><strong>P(Hₖ)</strong> — априорная вероятность гипотезы</li>
+                <li><strong>P(A|Hₖ)</strong> — вероятность события A при гипотезе Hₖ</li>
+                <li><strong>P(Hₖ|A)</strong> — апостериорная вероятность гипотезы</li>
+            </ul>
+
+            <div class="example">
+                <strong>Пример:</strong> На складе 60% деталей с завода №1 и 40% с завода №2. Брак: 3% и 5% соответственно. Найти вероятность, что бракованная деталь с завода №1.<br><br>
+                <strong>Решение:</strong><br>
+                P(A) = 0.6 · 0.03 + 0.4 · 0.05 = 0.038<br>
+                P(H₁|A) = (0.6 · 0.03) / 0.038 ≈ 0.474
+            </div>
+        </div>
+    </article>
+</div>
+<footer>Учебный портал по подготовке к ЕГЭ по математике (профиль)</footer>
+<script src="nav.js"></script>
+</body>
+</html>
